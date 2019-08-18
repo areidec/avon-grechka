@@ -33,7 +33,7 @@ body
 	background-color: grey
 
 .viewport
-	//overflow: hidden
+	overflow: hidden
 	width: 3138px
 	height: 252px
 	background: $bg-main
@@ -139,238 +139,65 @@ body
 
 .photo-gallery
 	position: absolute
-	width: 2019px
+	width: 1991px
 	height: 100%
 	opacity: 1
 	right: 0
 
-.card
+.column
+	width: 230px
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
 	position: absolute
-	background: #f2f2f2
-	box-shadow: 3px -0.3px 9.1px 0.9px #7b7b7b
-	&__photo
-		background: #000000
+	&:after
 		position: absolute
-
-// card size
-.card
+		content: ""
+		background: #ffffff
+		height: 2938px
+		top: -20px
+		width: 262px
+		left: -16px
+		z-index: 1
+	&__photo
+		z-index: 2
+		background: #000000
+		&_little
+			width: 107px
+			height: 106px
+			margin-bottom: 14px
+		&_big
+			width: 100%
+			height: 230px
+			margin-bottom: 14px
+		&:last-child
+			margin-bottom: 0
 	&:nth-child(1)
-		width: 144px
-		height: 155px
-		.card__photo
-			width: 130px
-			height: 130px
-			left: 8px
-			top: 8px
-	&:nth-child(2), &:nth-child(18)
-		width: 110px
-		height: 119px
-		.card__photo
-			width: 100px
-			height: 100px
-			left: 5px
-			top: 6px
+		left: 28px
+		top: -2918px
+	&:nth-child(2)
+		right: 1482px
+		top: 272px
 	&:nth-child(3)
-		width: 234px
-		height: 253px
-		.card__photo
-			width: 212px
-			height: 215px
-			left: 11px
-			top: 11px
+		top: -2918px
+		right: 1230px
 	&:nth-child(4)
-		width: 102px
-		height: 110px
-		.card__photo
-			width: 92px
-			height: 92px
-			left: 5px
-			top: 6px
+		top: 272px
+		right: 984px
 	&:nth-child(5)
-		width: 119px
-		height: 128px
-		transform: rotate(-3deg)
-		.card__photo
-			width: 110px
-			height: 110px
-			left: 6px
-			top: 6px
+		top: -2918px
+		right: 738px
 	&:nth-child(6)
-		width: 219px
-		height: 236px
-		.card__photo
-			width: 201px
-			height: 201px
-			left: 9px
-			top: 9px
-	&:nth-child(7), &:nth-child(9), &:nth-child(16)
-		width: 122px
-		height: 132px
-		.card__photo
-			width: 115px
-			height: 115px
-			left: 5px
-			top: 4px
+		top: 272px
+		right: 492px
+	&:nth-child(7)
+		top: -2918px
+		right: 246px
 	&:nth-child(8)
-		width: 95px
-		height: 102px
-		.card__photo
-			width: 86px
-			height: 86px
-			left: 5px
-			top: 5px
-	// &:nth-child(9)
-	&:nth-child(10)
-		width: 99px
-		height: 107px
-		.card__photo
-			width: 90px
-			height: 90px
-			left: 5px
-			top: 6px
-	&:nth-child(11)
-		width: 209px
-		height: 226px
-		.card__photo
-			width: 161px
-			height: 203px
-			left: 24px
-			top: 11px
-	&:nth-child(12)
-		width: 115px
-		height: 124px
-		.card__photo
-			width: 108px
-			height: 108px
-			left: 4px
-			top: 3px
-	&:nth-child(13)
-		width: 129px
-		height: 139px
-		.card__photo
-			width: 118px
-			height: 119px
-			left: 5px
-			top: 5px
-	&:nth-child(14)
-		width: 220px
-		height: 237px
-		.card__photo
-			width: 199px
-			height: 199px
-			left: 10px
-			top: 12px
-	&:nth-child(15)
-		width: 130px
-		height: 140px
-		.card__photo
-			width: 119px
-			height: 119px
-			left: 6px
-			top: 6px
-	// &:nth-child(16)
-	&:nth-child(17)
-		width: 149px
-		height: 160px
-		.card__photo
-			width: 138px
-			height: 138px
-			left: 5px
-			top: 6px
-	// &:nth-child(18)
-	&:nth-child(19)
-		width: 245px
-		height: 264px
-		.card__photo
-			width: 225px
-			height: 225px
-			left: 10px
-			top: 10px
-
+		top: 272px
+		right: 0px
 	
 
-//position default
-.card
-	&:nth-child(1)
-		left: 0
-		top: -7px
-		z-index: 1
-	&:nth-child(2)
-		top: 140px
-		left: 68px
-		z-index: 2
-	&:nth-child(3)
-		z-index: 1
-		left: 155px
-		top: -11px
-	&:nth-child(4)
-		left: 399px
-		top: 0px
-	&:nth-child(5)
-		left: 382px
-		top: 127px
-		z-index: 2
-	&:nth-child(6)
-		left: 516px
-		top: 7px
-		z-index: 3
-	&:nth-child(7)
-		left: 749px
-		top: 2px
-		z-index: 1
-	&:nth-child(8)
-		left: 732px
-		top: 134px
-		z-index: 2
-	&:nth-child(9)
-		left: 836px
-		top: 115px
-		z-index: 3
-	&:nth-child(10)
-		left: 879px
-		top: 3px
-		z-index: 1
-	&:nth-child(11)
-		left: 967px
-		top: 11px
-		z-index: 2
-	&:nth-child(12)
-		top: 6px
-		left: 1173px
-		z-index: 1
-	&:nth-child(13)
-		z-index: 2
-		left: 1196px
-		top: 114px
-	&:nth-child(14)
-		z-index: 1
-		left: 1299px
-		top: 15px
-	&:nth-child(15)
-		z-index: 2
-		left: 1515px
-		top: 2px
-	&:nth-child(16)
-		z-index: 3
-		left: 1546px
-		top: 131px
-	&:nth-child(17)
-		z-index: 4
-		left: 1654px
-		top: 1px
-	&:nth-child(18)
-		z-index: 5
-		left: 1679px
-		top: 143px
-	&:nth-child(19)
-		left: 1814px
-		top: -8px
-
-//анимация карточек 
-// .card 
-// 	transition:  opacity ease 1s
-// 	&_visible
-// 		opacity: 1
 
 .h1
 	position: absolute

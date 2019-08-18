@@ -39,7 +39,29 @@ document.addEventListener("DOMContentLoaded", function() {
 		$('.avon-logo__text').animate( {"opacity":"0"}, 500,"swing");
 		$('.avon-logo__left-sheets, .avon-logo__right-sheet').animate( {"opacity":"0"}, 500,"swing");
 		$('.sheets').animate( {"opacity":"0"}, 500,"swing");
-	},2500)
+	},2500);
+	setTimeout(()=>{
+		$('.avon-logo__text').animate().finish();
+		$('.avon-logo__left-sheets, .avon-logo__right-sheet').animate().finish();
+		$('.sheets').animate().finish();
+	},3000);
+
+	setTimeout(()=>{
+		$('.column:nth-child(odd)').animate({"top":"-2658px"},1000, "swing");
+	},4000)
+	setTimeout(()=>{
+		$('.column:nth-child(even)').animate({"top":"20px"},1000, "swing");
+	},4000)
+
+	setTimeout(()=>{
+		$('.column:nth-child(odd)').animate({"top":"-2416px"},1000, "swing");
+	},5500)
+	setTimeout(()=>{
+		$('.column:nth-child(even)').animate({"top":"-110px"},1000, "swing");
+	},5500)
+
+
+
 
 //	$('.avon-logo__').delay(500).animate(
 //		{"opacity":"1"},
