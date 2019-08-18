@@ -24,38 +24,37 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 	}
 
-	//Анимация логотипа
-	$('.avon-logo').animate(
-		{"opacity":"1"},
-		{
-			duration: 2000,
-			easing: "swing",
-			complete: () => {
-				$('.avon-logo').delay(1000).animate({"opacity":"0"}, 1000, "swing");
-				setTimeout(()=>{
-					$('.avon-logo').animate({"left":"-91px"}, 0);
-					$('.avon-logo').animate({"opacity":"1"}, 1000, "swing");
-				},2000)
-			}
-		}
-	)
-
-	//Анимация листиков
+	//Анимация логотипа текст
+	$('.avon-logo__text').delay(500).animate( {"opacity":"1"}, 500,"swing");
+	$('.avon-logo__left-sheets, .avon-logo__right-sheet').delay(1000).animate( {"opacity":"1"}, 500,"swing");
+	$('.sheets').delay(1500).animate( {"opacity":"1"}, 500,"swing");
+	//останавливаем анимацию
 	setTimeout(()=>{
-		$('.sheets').animate(
-			{"opacity":"1"},
-			{
-				duration: 1000,
-				easing: "swing",
-				complete: () => {
-					$('.sheets').delay(1000).animate({"opacity":"0"}, 1000, "swing")
-				}
-			}
-		)
-	},1000)
+		$('.avon-logo__text').animate().finish();
+		$('.avon-logo__left-sheets, .avon-logo__right-sheet').animate().finish();
+		$('.sheets').animate().finish();
+	}, 2000);
+	// запускаем пропадание
+	setTimeout(()=>{
+		$('.avon-logo__text').animate( {"opacity":"0"}, 500,"swing");
+		$('.avon-logo__left-sheets, .avon-logo__right-sheet').animate( {"opacity":"0"}, 500,"swing");
+		$('.sheets').animate( {"opacity":"0"}, 500,"swing");
+	},2500)
 
-	//Анимация плашек
-	$('.avon-title').delay(5000).animate({"opacity":"1"}, 1000, "swing")
+//	$('.avon-logo__').delay(500).animate(
+//		{"opacity":"1"},
+//		{
+//			duration: 500,
+//			easing: "swing",
+//			complete: () => {
+//				$('.avon-logo').delay(1000).animate({"opacity":"0"}, 1000, "swing");
+//				setTimeout(()=>{
+//					$('.avon-logo').animate({"left":"-91px"}, 0);
+//					$('.avon-logo').animate({"opacity":"1"}, 1000, "swing");
+//				},2000)
+//			}
+//		}
+//	)
 
 
 });

@@ -33,7 +33,7 @@ body
 	background-color: grey
 
 .viewport
-	overflow: hidden
+	//overflow: hidden
 	width: 3138px
 	height: 252px
 	background: $bg-main
@@ -41,33 +41,59 @@ body
 
 .avon-logo
 	position: absolute
-	top: -127px
-	left: calc(50% - 356px)
-	opacity: 0
-	// animation: logo-opacity-transform-left ease 4s forwards
+	left: calc(50% - 201.5px)
+	opacity: 1
+	&__text
+		position: absolute
+		top: 18px
+		z-index: 3
+		opacity: 0
+	&__left-sheets
+		opacity: 0
+		img:nth-child(1)
+			position: absolute
+			height: 120px
+			left: -80px
+			top: 79px
+			z-index: 2
+			transform: rotate(-45deg)
+		img:nth-child(2)
+			position: absolute
+			z-index: 1
+			transform: rotate(-98deg)
+			height: 144px
+			left: -126px
+			top: 70px
+	&__right-sheet
+		opacity: 0
+		position: absolute
+		right: -523px
+		transform: rotate(17deg)
+		top: -53px
+		img
+			height: 300px
+// animation: logo-opacity-transform-left ease 4s forwards
 
 // .anim-logo
 // 	animation: logo-opacity-transform-left ease 4s forwards
 
-//Листь я на первом кадре анимаций
+//Лист я на первом кадре анимаций
 .sheets
 	position: absolute
 	width: 100%
 	height: 100%
 	opacity: 0
-	// animation: sheets-fade-in-out 3s ease forwards
-	// animation-delay: 1s
 	img 
 		position: absolute
-		opacity: 0.5
 	img:nth-child(1)
-		transform: scale(0.7)
 		left: 392px
 		top: 113px
 	img:nth-child(2)
-		right: -112px
-		top: -82px
-		transform: rotate(211deg)
+		right: -300px
+		top: -100px
+		transform: rotate(197deg)
+		height: 500px
+		opacity: 0.5
 
 // .anim-sheets
 // 	animation: sheets-fade-in-out 3s ease forwards
@@ -113,10 +139,10 @@ body
 
 .photo-gallery
 	position: absolute
-	left: 1033px
-	width: 2105px
+	width: 2019px
 	height: 100%
 	opacity: 1
+	right: 0
 
 .card
 	position: absolute
