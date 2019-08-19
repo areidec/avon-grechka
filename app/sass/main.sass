@@ -47,7 +47,8 @@ body
 		position: absolute
 		top: 18px
 		z-index: 3
-		opacity: 0
+		// opacity: 0
+		opacity: 1
 	&__left-sheets
 		opacity: 0
 		img:nth-child(1)
@@ -72,10 +73,6 @@ body
 		top: -53px
 		img
 			height: 300px
-// animation: logo-opacity-transform-left ease 4s forwards
-
-// .anim-logo
-// 	animation: logo-opacity-transform-left ease 4s forwards
 
 //Лист я на первом кадре анимаций
 .sheets
@@ -95,9 +92,6 @@ body
 		height: 500px
 		opacity: 0.5
 
-// .anim-sheets
-// 	animation: sheets-fade-in-out 3s ease forwards
-
 .avon-title
 	position: absolute
 	left: 483px
@@ -105,7 +99,6 @@ body
 	width: 550px
 	height: 207px
 	opacity: 0
-	// animation: .8s ease 4s fades forwards
 	&__plashka
 		background: #ffee8d
 		color: $bg-main
@@ -133,13 +126,11 @@ body
 		width: 319px
 		height: 299px
 		left: 232px
-		
-// .anim-avon-title
-// 	animation: .8s ease 4s fades forwards
+
 
 .photo-gallery
 	position: absolute
-	width: 1991px
+	width: 1767px
 	height: 100%
 	opacity: 1
 	right: 0
@@ -176,96 +167,58 @@ body
 		left: 28px
 		top: -2918px
 	&:nth-child(2)
-		right: 1482px
+		right: 1252px
 		top: 272px
 	&:nth-child(3)
 		top: -2918px
-		right: 1230px
+		right: 1000px
 	&:nth-child(4)
 		top: 272px
-		right: 984px
+		right: 754px
 	&:nth-child(5)
 		top: -2918px
-		right: 738px
+		right: 508px
 	&:nth-child(6)
 		top: 272px
-		right: 492px
+		right: 262px
 	&:nth-child(7)
 		top: -2918px
-		right: 246px
-	&:nth-child(8)
-		top: 272px
-		right: 0px
+		right: 16px
+
 	
-
-
-.h1
+.avon-titres
 	position: absolute
-	margin: 0
-	line-height: 94px
-	font-size: 61px
-	font-weight: 800
-	text-align: center
-	letter-spacing: -6px
-	text-transform: uppercase
-	width: 100%
-	span 
-		opacity: 0
-		// transition-duration: .5s
-		// transition-property: opacity
-	// span:nth-child(2)
-	// 	transition-delay: .1s
-	// span:nth-child(3)
-	// 	transition-delay: .15s
-	// span:nth-child(4)
-	// 	transition-delay: .18s
-	// span:nth-child(5)
-	// 	transition-delay: .22s
-	// span:nth-child(6)
-	// 	transition-delay: .27s
-	// span:nth-child(7)
-	// 	transition-delay: .3s
-	// span:nth-child(8)
-	// 	transition-delay: .35s
-	// span:nth-child(9)
-	// 	transition-delay: .4s
-	// span:nth-child(10)
-	// 	transition-delay: .5s
-
-// .h-visible
-// 	span:nth-child(1)
-// 		opacity: 1
-// 	span:nth-child(2)
-// 		opacity: 1
-// 	span:nth-child(3)
-// 		opacity: 1
-// 	span:nth-child(4)
-// 		opacity: 1
-// 	span:nth-child(5)
-// 		opacity: 1
-// 	span:nth-child(6)
-// 		opacity: 1
-// 	span:nth-child(7)
-// 		opacity: 1
-// 	span:nth-child(8)
-// 		opacity: 1
-// 	span:nth-child(9)
-// 		opacity: 1
-// 	span:nth-child(10)
-// 		opacity: 1
-
-.p
-	margin: 0
-	text-align: center
-	text-transform: uppercase
-	font-size: 28px
+	left: 769px
+	top: 65px
+	z-index: 10
+.titr
+	width: 600px
+	position: absolute
 	opacity: 0
-	line-height: 128px
-	position: absolute
-	// transition-name: opacity
-	// transition-duration: .5s
-	// transition-delay: .5s
-	width: 100%
-
-.p_visible
-	opacity: 1
+	h2 
+		font-size: 58px
+		font-weight: bold
+		line-height: 1.11
+		color: #ffffff
+		text-transform: uppercase
+		margin: 0
+		z-index: 2
+		position: relative
+	img 
+		position: absolute
+		right: -43px
+		top: -43px
+		z-index: 1
+		height: 280px
+	&_4
+		h2
+			font-size: 170px
+			font-weight: 900
+			margin-top: -29px
+		img 
+			right: 28px
+			top: -79px
+		.commaz
+			height: 68px
+			left: 283px
+			top: 101px
