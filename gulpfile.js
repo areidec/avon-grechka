@@ -20,7 +20,7 @@ gulp.task('browser-sync', function() {
 		notify: false,
 		// online: false, // Work offline without internet connection
 		// tunnel: true, 
-		// tunnel: 'projectname', 
+		// tunnel: 'projectname12121', 
 	})
 });
 function bsReload(done) { browserSync.reload(); done(); };
