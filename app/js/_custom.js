@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// 	item.innerHTML = photo 
 	// })
 
-
+	
 
 	const start = (photos) => {
 			// Анимация логотипа текст
@@ -118,10 +118,11 @@ document.addEventListener("DOMContentLoaded", function() {
 			TweenLite.to(oddCols, 2.5, { ease: custom2, y: 1911 }).delay(22.5);
 			TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2096 }).delay(25);
 			TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2281 }).delay(27.5);
-			TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2466 }).delay(30);
-			TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2836 }).delay(32.5);
+
+			// TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2466 }).delay(30);
+			// TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2836 }).delay(32.5);
 			// TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2922 }).delay(35);
-		
+			
 			//четный
 			TweenLite.to(evenCols, 2.5, { ease: custom, y: -430});
 			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -617 }).delay(2.5);
@@ -135,11 +136,13 @@ document.addEventListener("DOMContentLoaded", function() {
 			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -2094 }).delay(22.5);
 			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -2279 }).delay(25);
 			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -2454 }).delay(27.5);
-			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -2639 }).delay(30);
-			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -2824 }).delay(32.5);
-			// TweenLite.to(evenCols, 2.5, { ease: custom2, y: -3164 }).delay(35);
-		}, 3500)
+
+			// 	TweenLite.to(evenCols, 2.5, { ease: custom2, y: -2639 }).delay(30);
+			// 	TweenLite.to(evenCols, 2.5, { ease: custom2, y: -2824 }).delay(32.5);
+			// 	TweenLite.to(evenCols, 2.5, { ease: custom2, y: -3164 }).delay(35);
+			// }, 3500)
 		
+		}, 3500)	
 		// Анимация титров
 		setTimeout(()=>{
 			$('.avon-logo__text').animate( {"opacity":"1"}, 500,"swing");
@@ -169,7 +172,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		setTimeout(()=>{
 			$('.titr_4').animate( {"opacity":"1"}, 500,"swing");
 		},27500)
-	}
-	window.start = start
+	};
+
+	window.start = start;
+
 	start()
 });
