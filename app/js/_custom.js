@@ -19,6 +19,46 @@ document.addEventListener("DOMContentLoaded", function() {
 	// 		console.log("index after cicle", index);
 	// 	};
 
+	const photos = {
+        'slide1': [
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+        ],
+        'slide2': [
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+        ],
+        'slide3': [
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+            './img/kola.jpg',
+        ],
+    };
+
+	
+
+	const parseImg = (photos) => {
+		console.log(photos)
+	}
+	parseImg(photos)
+
 	// const photo = `<img src="./img/kola.jpg">`
 
 	// $('.column__photo').map((index, item)=>{
@@ -80,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2281 }).delay(27.5);
 			TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2466 }).delay(30);
 			TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2836 }).delay(32.5);
-			TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2922 }).delay(35);
+			// TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2922 }).delay(35);
 		
 			//четный
 			TweenLite.to(evenCols, 2.5, { ease: custom, y: -430});
@@ -97,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -2454 }).delay(27.5);
 			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -2639 }).delay(30);
 			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -2824 }).delay(32.5);
-			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -3164 }).delay(35);
+			// TweenLite.to(evenCols, 2.5, { ease: custom2, y: -3164 }).delay(35);
 		}, 3500)
 		
 		// Анимация титров
@@ -130,6 +170,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			$('.titr_4').animate( {"opacity":"1"}, 500,"swing");
 		},27500)
 	}
-	window.start = start;
-	start();
+	window.start = start
+	start()
 });
