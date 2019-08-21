@@ -1,23 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
 
-	// fetch('http://localhost:3000/photos.json')
-	// 	.then( response => {
-	// 		return response.json()
-	// 	})
-	// 	.then( json => {
-	// 		addPhoto(json, 0, 9);
-	// 	})
-	
-	// 	const addPhoto = (json, index, index_max) => {
-	// 		for(index; index < json.length; index++) {
-	// 			console.log(index)
-	// 			if(index === index_max) {
-	// 				break;
-	// 			}
-	
-	// 		}
-	// 		console.log("index after cicle", index);
-	// 	};
 
 	const photos = {
         'slide1': [
@@ -171,8 +152,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	
 
-	const parseImg = (photos) => {
-		console.log(photos)	
+	window.parseImg = (photos) => {
 		for(let i = 1; i <= 7; i++) {
 			if(i % 2 === 0) {
 				for(let j = 0; j < 4; j++) {
@@ -264,8 +244,9 @@ document.addEventListener("DOMContentLoaded", function() {
 				}
 			}
 		}
+		start()
 	}
-	parseImg(photos)
+	
 
 	// const photo = `<img src="./img/kola.jpg">`
 
@@ -383,6 +364,3 @@ document.addEventListener("DOMContentLoaded", function() {
 	};
 
 	window.start = start;
-
-	start()
-});
