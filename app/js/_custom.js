@@ -15,17 +15,6 @@
 			'./img/numbers/10.jpg',
 			'./img/numbers/11.jpg',
 			'./img/numbers/12.jpg',
-			'./img/numbers/13.jpg',
-			'./img/numbers/14.jpg',
-			'./img/numbers/15.jpg',
-			'./img/numbers/16.jpg',
-			'./img/numbers/17.jpg',
-			'./img/numbers/18.jpg',
-			'./img/numbers/19.jpg',
-			'./img/numbers/20.jpg',
-			'./img/numbers/21.jpg',
-			'./img/numbers/0.gif',
-			'./img/numbers/3.gif',
 		],
         'slide2': [
 			'./img/numbers/0.gif',
@@ -39,14 +28,6 @@
 			'./img/numbers/8.gif',
 			'./img/numbers/9.gif',
 			'./img/numbers/10.jpg',
-			'./img/numbers/11.jpg',
-			'./img/numbers/12.jpg',
-			'./img/numbers/13.jpg',
-			'./img/numbers/14.jpg',
-			'./img/numbers/15.jpg',
-			'./img/numbers/16.jpg',
-			'./img/numbers/17.jpg',
-			'./img/numbers/18.jpg',
 			'./img/numbers/19.jpg',
 			'./img/numbers/20.jpg',
 			'./img/numbers/21.jpg',
@@ -85,17 +66,6 @@
 			'./img/numbers/10.jpg',
 			'./img/numbers/11.jpg',
 			'./img/numbers/12.jpg',
-			'./img/numbers/13.jpg',
-			'./img/numbers/14.jpg',
-			'./img/numbers/15.jpg',
-			'./img/numbers/16.jpg',
-			'./img/numbers/17.jpg',
-			'./img/numbers/18.jpg',
-			'./img/numbers/19.jpg',
-			'./img/numbers/20.jpg',
-			'./img/numbers/21.jpg',
-			'./img/numbers/0.gif',
-			'./img/numbers/3.gif',
 			'./img/numbers/4.gif',
 			'./img/numbers/0.gif',
 			'./img/numbers/1.gif',
@@ -110,13 +80,6 @@
 			'./img/numbers/2.gif',
 			'./img/numbers/3.gif',
 			'./img/numbers/4.gif',
-			'./img/numbers/5.gif',
-			'./img/numbers/6.gif',
-			'./img/numbers/7.gif',
-			'./img/numbers/8.gif',
-			'./img/numbers/9.gif',
-			'./img/numbers/10.jpg',
-			'./img/numbers/11.jpg',
 			'./img/numbers/12.jpg',
 			'./img/numbers/13.jpg',
 			'./img/numbers/14.jpg',
@@ -148,8 +111,39 @@
 			'./img/numbers/17.jpg',
 			'./img/numbers/18.jpg',
 		]
-    };
+	};
+	
+	if(photos.slide1.length < 24) {
+		var curentInArray = 0;
+		for (var i=photos.slide1.length; i<24; i++) {
+			photos.slide1.push(photos.slide1[curentInArray]);
+			curentInArray++;
+		}
+	}
 
+	if(photos.slide2.length < 42) {
+		var curentInArray = 0;
+		for (var i=photos.slide2.length; i<42; i++) {
+			photos.slide2.push(photos.slide2[curentInArray]);
+			curentInArray++;
+		}
+	}
+
+	if(photos.slide3.length < 31) {
+		var curentInArray = 0;
+		for (var i=photos.slide3.length; i<31; i++) {
+			photos.slide3.push(photos.slide3[curentInArray]);
+			curentInArray++;
+		}
+	}
+
+	if(photos.slide4.length < 42) {
+		var curentInArray = 0;
+		for (var i=photos.slide4.length; i<42; i++) {
+			photos.slide4.push(photos.slide4[curentInArray]);
+			curentInArray++;
+		}
+	}
 	
 
 	window.parseImg = (photos) => {
