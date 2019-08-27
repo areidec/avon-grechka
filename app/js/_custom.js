@@ -110,6 +110,43 @@
 			'./img/numbers/16.jpg',
 			'./img/numbers/17.jpg',
 			'./img/numbers/18.jpg',
+		],
+		'slide5': [
+			'./img/numbers/0.gif',
+			'./img/numbers/1.gif',
+			'./img/numbers/2.gif',
+			'./img/numbers/3.gif',
+			'./img/numbers/4.gif',
+			'./img/numbers/12.jpg',
+			'./img/numbers/13.jpg',
+			'./img/numbers/14.jpg',
+			'./img/numbers/15.jpg',
+			'./img/numbers/16.jpg',
+			'./img/numbers/17.jpg',
+			'./img/numbers/18.jpg',
+			'./img/numbers/19.jpg',
+			'./img/numbers/20.jpg',
+			'./img/numbers/21.jpg',
+			'./img/numbers/0.gif',
+			'./img/numbers/0.gif',
+			'./img/numbers/1.gif',
+			'./img/numbers/2.gif',
+			'./img/numbers/3.gif',
+			'./img/numbers/4.gif',
+			'./img/numbers/5.gif',
+			'./img/numbers/6.gif',
+			'./img/numbers/7.gif',
+			'./img/numbers/8.gif',
+			'./img/numbers/9.gif',
+			'./img/numbers/10.jpg',
+			'./img/numbers/11.jpg',
+			'./img/numbers/12.jpg',
+			'./img/numbers/13.jpg',
+			'./img/numbers/14.jpg',
+			'./img/numbers/15.jpg',
+			'./img/numbers/16.jpg',
+			'./img/numbers/17.jpg',
+			'./img/numbers/18.jpg',
 		]
 	};
 	
@@ -141,6 +178,14 @@
 		var curentInArray = 0;
 		for (var i=photos.slide4.length; i<42; i++) {
 			photos.slide4.push(photos.slide4[curentInArray]);
+			curentInArray++;
+		}
+	}
+
+	if(photos.slide5.length < 42) {
+		var curentInArray = 0;
+		for (var i=photos.slide5.length; i<42; i++) {
+			photos.slide5.push(photos.slide5[curentInArray]);
 			curentInArray++;
 		}
 	}
@@ -238,49 +283,52 @@
 				}
 			}
 		}
+
+		for(let i = 1; i <= 7; i++) {
+			for(let j = 0; j < 6; j++) {
+				const columnLength = $(`.column[data-id=${i}]`).children().length + 1;
+				const div = $(`<div class="column__photo" />`);
+				div.addClass( (columnLength + 2) % 3 === 0 ? 'column__photo_big' : 'column__photo_little');
+
+				const src = photos.slide5.shift();
+				const img = $(`<img src="${src}">`);
+
+				div.append(img);
+				if(i % 2 === 0) {
+					$(`.column[data-id=${i}]`).append(div);
+				} else {
+					$(`.column[data-id=${i}]`).prepend(div);
+				}
+			}
+		}
 		start()
 	}
 	
 
-	// const photo = `<img src="./img/kola.jpg">`
-
-	// $('.column__photo').map((index, item)=>{
-	// 	item.innerHTML = photo 
-	// })
-
-	
-
 	const start = (photos) => {
-			// Анимация логотипа текст
-		$('.avon-logo__text').delay(500).animate( {"opacity":"1"}, 500,"swing");
-		$('.avon-logo__left-sheets, .avon-logo__right-sheet').delay(1000).animate( {"opacity":"1"}, 500,"swing");
-		$('.sheets').delay(1500).animate( {"opacity":"1"}, 500,"swing");
+		
+		$('.avon-intro__text').delay(500).animate( {"opacity":"1"}, 500,"swing");
+		$('.avon-intro__cactus, .avon-intro__clevers').delay(1000).animate( {"opacity":"1"}, 500,"swing");
 		//останавливаем анимацию
 		setTimeout(()=>{
-			$('.avon-logo__text').animate().finish();
-			$('.avon-logo__left-sheets, .avon-logo__right-sheet').animate().finish();
-			$('.sheets').animate().finish();
+			$('.avon-intro__text').animate().finish();
+			$('.avon-intro__cactus, .avon-intro__clevers').animate().finish();
 		}, 2000);
 		// запускаем пропадание
 		setTimeout(()=>{
-			$('.avon-logo__text').animate( {"opacity":"0"}, 500,"swing");
-			$('.avon-logo__left-sheets, .avon-logo__right-sheet').animate( {"opacity":"0"}, 500,"swing");
-			$('.sheets').animate( {"opacity":"0"}, 500,"swing");
+			$('.avon-intro__text').animate( {"opacity":"0"}, 500,"swing");
+			$('.avon-intro__cactus, .avon-intro__clevers').animate( {"opacity":"0"}, 500,"swing");
 		},2500);
 		setTimeout(()=>{
-			$('.avon-logo__text').animate().finish();
-			$('.avon-logo__left-sheets, .avon-logo__right-sheet').animate().finish();
-			$('.sheets').animate().finish();
-			$('.avon-logo').css({"left":"320px"});
-			$('.avon-logo__left-sheets img:nth-child(1)').css({"opacity":"0"});
-			$('.avon-logo__left-sheets img:nth-child(2)')
-				.css({"transform":"rotate(-131deg) skewX(-10deg)", "height":"464px", "left":"-210px", "top":"-99px" });
-		},3000);
+			$('.avon-intro__text').animate().finish();
+			$('.avon-intro__cactus').animate().finish();
+			$('.avon-intro__cactus').css({"left":"-214px"});
+			$('.avon-intro').css({"left":"330px"});
+			$('.avon-intro__text, .avon-intro__cactus').animate( {"opacity":"1"}, 500,"swing");
+		}, 5000);
 
 
-
-		//Анимация фоток
-
+		// Анимация фоток
 		setTimeout(()=>{
 			const oddCols = $('.column:nth-child(odd)')
 			const evenCols = $('.column:nth-child(even)')
@@ -301,10 +349,11 @@
 			TweenLite.to(oddCols, 2.5, { ease: custom2, y: 1911 }).delay(22.5);
 			TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2096 }).delay(25);
 			TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2281 }).delay(27.5);
-
-			// TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2466 }).delay(30);
-			// TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2836 }).delay(32.5);
-			// TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2922 }).delay(35);
+			TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2466 }).delay(30);
+			TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2651 }).delay(32.5);
+			TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2651 }).delay(32.5);
+			TweenLite.to(oddCols, 2.5, { ease: custom2, y: 2836 }).delay(35);
+			TweenLite.to(oddCols, 2.5, { ease: custom2, y: 3021 }).delay(37.5);
 			
 			//четный
 			TweenLite.to(evenCols, 2.5, { ease: custom, y: -430});
@@ -319,42 +368,68 @@
 			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -2094 }).delay(22.5);
 			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -2279 }).delay(25);
 			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -2454 }).delay(27.5);
+			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -2639 }).delay(30);
+			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -2824 }).delay(32.5);
+			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -3000 }).delay(35);
+			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -3175 }).delay(37.5);
 
-			// 	TweenLite.to(evenCols, 2.5, { ease: custom2, y: -2639 }).delay(30);
-			// 	TweenLite.to(evenCols, 2.5, { ease: custom2, y: -2824 }).delay(32.5);
-			// 	TweenLite.to(evenCols, 2.5, { ease: custom2, y: -3164 }).delay(35);
-			// }, 3500)
-		
 		}, 3500)	
+
 		// Анимация титров
 		setTimeout(()=>{
-			$('.avon-logo__text').animate( {"opacity":"1"}, 500,"swing");
-			$('.avon-logo__left-sheets').animate( {"opacity":"1"}, 500,"swing");
-		}, 3500);
-		setTimeout(()=>{
 			$('.titr_1').animate( {"opacity":"1"}, 500,"swing");
-		},4000)
+		},6500)
 
 		setTimeout(()=>{
 			$('.titr_1').animate( {"opacity":"0"}, 500,"swing");
-		},11000)
+		},14000)
 		setTimeout(()=>{
 			$('.titr_2').animate( {"opacity":"1"}, 500,"swing");
-		},11500)
+		},14500)
 
 		setTimeout(()=>{
 			$('.titr_2').animate( {"opacity":"0"}, 500,"swing");
-		},19000)
+		},22000)
 		setTimeout(()=>{
 			$('.titr_3').animate( {"opacity":"1"}, 500,"swing");
-		},19500)
+		},22500)
 
 		setTimeout(()=>{
 			$('.titr_3').animate( {"opacity":"0"}, 500,"swing");
-		},27000)
+		},30000)
 		setTimeout(()=>{
 			$('.titr_4').animate( {"opacity":"1"}, 500,"swing");
-		},27500)
+		},30500)
+
+		setTimeout(()=>{
+			$('.titr_4').animate( {"opacity":"0"}, 500,"swing");
+			$('.avon-titres').animate( {"opacity":"0"}, 500,"swing");
+			$('.avon-intro').animate({"opacity":"0"}, 500,"swing");
+		},38000)
+
+		setTimeout(()=>{
+			$('.avon-titres').css({"left":"50px", "top":"112px"});
+			$('.avon-titres').animate( {"opacity":"1"}, 500,"swing");
+			$('.avon-intro__text svg').css({"width":"316px"});
+			$('.avon-intro').css({"left":"1060px", "top":"50%", "z-index":"11"});
+			$('.avon-intro__cactus').css({"opacity":"0"});
+			$('.avon-intro').animate({"opacity":"1"}, 500,"swing");
+			$('.titr_5').animate( {"opacity":"1"}, 300,"swing");
+		},38500) 
+
+		setTimeout(()=>{
+			$('.photo-gallery').animate( {"opacity":"0"}, 500,"swing");
+			$('.avon-intro').animate( {"opacity":"0"}, 500,"swing");
+			$('.avon-titres').animate( {"opacity":"0"}, 500,"swing");
+		},44000)
+
+		setTimeout(()=>{
+			$('.avon-logo__text').animate( {"opacity":"1"}, 500,"swing");
+			$('.avon-logo__text').delay(500).animate( {"left":"0"}, 500,"swing");
+			$('.avon-logo__left-sheets, .avon-logo__right-sheet').delay(1000).animate( {"opacity":"1"}, 500,"swing");
+			$('.avon-logo_h3').delay(1000).animate( {"opacity":"1"}, 500,"swing");
+		}, 45000)
+
 	};
 
 	window.start = start;

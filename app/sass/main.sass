@@ -39,39 +39,68 @@ body
 	background: $bg-main
 	position: relative
 
+.avon-intro
+	position: absolute
+	top: calc(50% - 5px)
+	transform: translate(-50%,-50%)
+	left: 50%
+	&__text
+		position: relative
+		z-index: 1
+		opacity: 0
+	&__text svg
+		width: 540px
+	&__cactus, &__clevers
+		position: absolute
+		opacity: 0
+	&__cactus
+		top: -50px
+		left: -237px
+		transform: rotate(-143deg)
+	&__clevers
+		top: -50px
+		right: -256px
+		transform: rotate(15deg)
+
 .avon-logo
 	position: absolute
-	left: calc(50% - 201.5px)
+	left: calc(50% - 304.5px)
 	opacity: 1
 	&__text
 		position: absolute
 		top: 18px
 		z-index: 3
 		opacity: 0
+		left: 90px
 	&__left-sheets
+		position: absolute
+		right: -926px
+		transform: rotate(12deg)
 		opacity: 0
-		img:nth-child(1)
-			position: absolute
-			height: 120px
-			left: -80px
-			top: 79px
-			z-index: 2
-			transform: rotate(-45deg)
-		img:nth-child(2)
-			position: absolute
-			z-index: 1
-			transform: rotate(-98deg)
-			height: 144px
-			left: -126px
-			top: 70px
+		img
+			height: 250px
 	&__right-sheet
 		opacity: 0
 		position: absolute
-		right: -523px
-		transform: rotate(17deg)
+		left: -210px
+		transform: rotate(-136deg)
 		top: -53px
 		img
-			height: 300px
+			height: 400px
+	&_h3
+		opacity: 0
+		color: #ffffff
+		position: absolute
+		left: 400px
+		top: -31px
+		h3
+			font-size: 189px
+			font-weight: 900
+		img 
+			height: 57px
+			position: absolute
+			top: 73px
+			right: -30px
 
 //Лист я на первом кадре анимаций
 .sheets
@@ -144,15 +173,15 @@ body
 		position: absolute
 		content: ""
 		background: #ffffff
-		height: 2926px
-		// height: 2422px
-		top: -494px
+		// height: 2926px
+		height: 3185px
+		top: -20px
 		width: 262px
 		left: -16px
 		z-index: 1
 	&_even
 		&:after
-			height: 3170px
+			height: 3290px
 			top: -14px
 	&__photo
 		z-index: 2
@@ -176,35 +205,36 @@ body
 	&:nth-child(1)
 		left: 28px
 		// top: -2913px
-		top: -2433px
+		top: -3166px
 	&:nth-child(2)
 		right: 1252px
 		top: 266px
 	&:nth-child(3)
 		// top: -2913px
-		top: -2433px
+		top: -3166px
 		right: 1000px
 	&:nth-child(4)
 		top: 266px
 		right: 754px
 	&:nth-child(5)
 		// top: -2913px
-		top: -2433px
+		top: -3166px
 		right: 508px
 	&:nth-child(6)
 		top: 266px
 		right: 262px
 	&:nth-child(7)
 		// top: -2913px
-		top: -2433px
+		top: -3166px
 		right: 16px
 
 	
 .avon-titres
 	position: absolute
-	left: 769px
-	top: 65px
+	left: 665px
+	top: 57px
 	z-index: 10
+
 .titr
 	width: 600px
 	position: absolute
@@ -220,18 +250,19 @@ body
 		position: relative
 	img 
 		position: absolute
-		right: -43px
+		right: -85px
 		top: -43px
 		z-index: 1
-		height: 280px
-	&_4
+		height: 234px
+	&_5
+		width: 2000px
 		h2
-			font-size: 170px
+			font-size: 90px
 			font-weight: 900
 			margin-top: -39px
 		img 
-			right: 94px
-			top: -79px
+			right: 674px
+			top: -105px
 		.commaz
 			height: 68px
 			left: 266px
