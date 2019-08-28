@@ -309,7 +309,7 @@
 	}
 	
 
-	const start = (photos) => {
+	const start = () => {
 		
 		$('.avon-intro__text').delay(500).animate( {"opacity":"1"}, 500,"swing");
 		$('.avon-intro__cactus, .avon-intro__clevers').delay(1000).animate( {"opacity":"1"}, 500,"swing");
@@ -332,7 +332,7 @@
 		}, 5000);
 
 
-		// Анимация фоток
+			// Анимация фоток
 		setTimeout(()=>{
 			const oddCols = $('.column:nth-child(odd)')
 			const evenCols = $('.column:nth-child(even)')
@@ -420,7 +420,7 @@
 			$('.avon-intro').animate({"opacity":"1"}, 500,"swing");
 			$('.titr_5').animate( {"opacity":"1"}, 300,"swing");
 		},38500) 
-
+		// 38500
 		setTimeout(()=>{
 			$('.photo-gallery').animate( {"opacity":"0"}, 500,"swing");
 			$('.avon-intro').animate( {"opacity":"0"}, 500,"swing");
