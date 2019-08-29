@@ -329,7 +329,7 @@
 			$('.avon-intro__cactus').css({"left":"-114px", "height":"489px", "top":"-151px", "transform":"rotate(-120deg)"});
 			$('.avon-intro').css({"left":"330px"});
 			$('.avon-intro__text, .avon-intro__cactus').animate( {"opacity":"1"}, 500,"swing");
-		}, 3500);
+		}, 3000);
 
 			// Анимация фоток
 		setTimeout(()=>{
@@ -376,12 +376,12 @@
 			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -3000 }).delay(35);
 			TweenLite.to(evenCols, 2.5, { ease: custom2, y: -3175 }).delay(37.5);
 
-		}, 3500)	
+		}, 3000)	
 
 		// Анимация титров
 		setTimeout(()=>{
-			$('.titr_1').animate( {"opacity":"1"}, 500,"swing");
-		},5000)
+			$('.titr_1').animate( {"opacity":"1"}, 1000,"swing");
+		},3000)
 
 		setTimeout(()=>{
 			$('.titr_1').animate( {"opacity":"0"}, 500,"swing");
@@ -418,7 +418,6 @@
 			$('.avon-intro__cactus').css({"opacity":"0"});
 			$('.avon-intro').animate({"opacity":"1"}, 500,"swing");
 			$('.titr_5').animate( {"opacity":"1"}, 300,"swing");
-
 			// $('.avon-intro__text').css({"opacity": "1"});
 		},38000) 
 		
@@ -431,9 +430,9 @@
 		setTimeout(()=>{
 			$('.avon-logo__text').animate( {"opacity":"1"}, 500,"swing");
 			$('.avon-logo__text').delay(500).animate( {"left":"0"}, 500,"swing");
-			$('.avon-logo__left-sheets, .avon-logo__right-sheet').delay(1000).animate( {"opacity":"1"}, 500,"swing");
-			$('.avon-logo_h3').delay(1000).animate( {"opacity":"1"}, 500,"swing");
-		}, 44500)
+			$('.avon-logo__left-sheets, .avon-logo__right-sheet').delay(1000).animate( {"opacity":"1"}, 1000,"swing");
+			$('.avon-logo_h3').delay(1000).animate( {"opacity":"1"}, 1000,"swing");
+		}, 43500)
 
 	};
 
